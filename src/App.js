@@ -136,7 +136,7 @@ function App() {
       <Gallery />
 
       <section className="bg-[#FFFFFF] text-[#000000] px-[30px] py-[50px]">
-        <div className="py-[20px] px-[15px] grid grid-cols-12 gap-x-10 gap-y-10">
+        <div className="py-[20px] px-[15px] grid grid-cols-12 lg:gap-x-10 gap-y-10">
           <div className="col-span-12 row-span-3 lg:text-left text-center lg:col-span-4 lg:row-span-6">
             <h2 className="text-[#444444] text-[40px] leading-[46px] mb-[40px] font-[900] md:text-[60px] md:mb-[20px] md:leading-[66px] lg:text-[80px] lg:leading-[90px]">Big <span className="text-[#D51820]">. </span> <span className="lg:block inline-block">Fair<span className="text-[#D51820]">.</span></span> <span className="lg:block inline-block">Human<span className="text-[#D51820]">.</span></span></h2>
             <p className="text-[#444444] max-w-[100%] lg:text-[17px] lg:leading-[23px] lg:font-[700] lg:max-w-[300px]">Learn why over 5 million clients choose XM as their trusted online broker.</p>

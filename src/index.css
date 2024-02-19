@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,6 +14,11 @@
 
 * {
   scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 body {
@@ -62,13 +74,47 @@ header {
 
 /* Form */
 input {
-  color: #000000;
+  color: #000000 !important;
+}
+
+input[type="date"],
+.date-input {
+  width: 80% !important;
+  color: #000000 !important;
+}
+
+::-webkit-input-placeholder {
+  color: #B1B1B1 !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+  font-weight: 400 !important;
+}
+
+::-moz-placeholder {
+  color: #B1B1B1 !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+  font-weight: 400 !important;
+}
+
+:-ms-input-placeholder {
+  color: #B1B1B1 !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+  font-weight: 400 !important;
+}
+
+::-ms-input-placeholder {
+  color: #B1B1B1 !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+  font-weight: 400 !important;
 }
 
 ::placeholder {
-  color: #B1B1B1;
+  color: #B1B1B1 !important;
   font-size: 14px !important;
-  line-height: 16px;
+  line-height: 16px !important;
   font-weight: 400 !important;
 }
 
@@ -92,6 +138,7 @@ input {
   background: #29A643;
   z-index: -1;
 }
+
 .form-step-icon-2:before {
   content: "2";
 }
@@ -194,7 +241,6 @@ input {
   border-radius: 50%;
   background: #000000;
 }
-
 
 /* Execution icon */
 .green-icons {
