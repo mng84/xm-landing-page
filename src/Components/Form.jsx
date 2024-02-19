@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import SuccessFormMessage from "./SuccessFormMessage"
+import SuccessFormMessage from "../components/SuccessFormMessage"
 import Loader from "./Loader"
 
 const Form = () => {
@@ -13,8 +13,14 @@ const Form = () => {
     // Validation messages
     const [fullNameMessage, setFullNameMessage] = useState("")
     const [emailMessage, setEmailMessage] = useState("")
-    const [passwordMessage, setPasswordMessage] = useState("")
     const [validInput, setValidInput] = useState(false)
+
+    // Password validation
+    const [passChars, setPassChars] = useState(false)
+    const [passNumber, setPassNumber] = useState(false)
+    const [passLowerChar, setPassLowerChar] = useState(false)
+    const [passUpperChar, setPassUpperChar] = useState(false)
+    const [passSpecialChars, setPassSpecialChars] = useState(false)
 
     // Regex fullname, email, password
     const regFullName = /^[a-zA-Z -]+$/
@@ -88,23 +94,33 @@ const Form = () => {
 
         // Password check
         if (password.trim().length < 8 || password.trim().length > 15) {
-
+            setPassChars(true)
+        } else {
+            setPassChars(false)
         }
         // 1 or more uppercase letters
         if ((/[A-Z]+/.test(password.trim()))) {
-
+            setPassUpperChar(true)
+        } else {
+            setPassUpperChar(false)
         }
         // 1 or more lower case letters
         if ((/[a-z]/.test(password.trim()))) {
-
+            setPassLowerChar(true)
+        } else {
+            setPassLowerChar(false)
         }
         // 1 or more numbers
         if ((/[0-9]+/.test(password.trim()))) {
-
+            setPassNumber(true)
+        } else {
+            setPassNumber(false)
         }
         // Special character
         if ((/[!@#\$%\^&\*\)\(\?\|\.,\/+\-_]+/.test(password))) {
-
+            setPassSpecialChars(true)
+        } else {
+            setPassSpecialChars(false)
         }
 
 
@@ -183,11 +199,11 @@ const Form = () => {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 className="p-[10px] w-full mb-[30px]" id="password" name="password" type="password" placeholder="Password" />
-                            <p className={validInput ? "default-message-text" : "error-message-text"}>8 - 15 characters</p>
-                            <p className={validInput ? "default-message-text" : "error-message-text"}>1 or more numbers</p>
-                            <p className={validInput ? "default-message-text" : "error-message-text"}>1 or more lower case letters</p>
-                            <p className={validInput ? "default-message-text" : "error-message-text"}>1 or more upper case letters</p>
-                            <p className={validInput ? "default-message-text" : "error-message-text"}>1 or more special characters (#[]()@$&*!?|,.^/\+_-)</p>
+                            <p className={passChars ? "default-message-text" : "error-message-text"}>8 - 15 characters</p>
+                            <p className={passNumber ? "default-message-text" : "error-message-text"}>1 or more numbers</p>
+                            <p className={passLowerChar ? "default-message-text" : "error-message-text"}>1 or more lower case letters</p>
+                            <p className={passUpperChar ? "default-message-text" : "error-message-text"}>1 or more upper case letters</p>
+                            <p className={passSpecialChars ? "default-message-text" : "error-message-text"}>1 or more special characters (#[]()@$&*!?|,.^/\+_-)</p>
                         </div>
                     </div>
 

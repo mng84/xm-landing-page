@@ -1,17 +1,14 @@
 import { useState, useEffect } from "react"
-// import Navigation from "./Components/Navigation"
-import Form from "./Components/Form"
-import Gallery from "./Components/Gallery"
-import Footer from "./Components/Footer"
-
-// XM logo
-import xmLogo from "./assets/images/xm-logo.png"
+import Header from "./components/Header"
+import Navigation from "./components/Navigation"
+import Form from "./components/Form"
+import Gallery from "./components/Gallery"
+import Footer from "./components/Footer"
 
 // Crypto icons
 import bitcoin from "./assets/images/bitcoin.png"
 
 import { FaCalendarCheck, FaRegClock, FaLocationDot } from "react-icons/fa6"
-
 
 // Icons
 import fastExecutionIcon from "./assets/images/fast-execusion-icon.png"
@@ -22,7 +19,6 @@ import authorisedAndRegulatedIcon from "./assets/images/authorised-and-regulated
 import commitedAndFairIcon from "./assets/images/commited-and-fair.png"
 import awardIcon from "./assets/images/award-icon.png"
 import supportIcon from "./assets/images/support.png"
-
 
 function App() {
 
@@ -42,26 +38,10 @@ function App() {
     <div className="w-full h-full max-w-[1200px] m-auto">
 
       {/* <Navigation /> */}
-      <nav className="w-full flex justify-center items-center lg:justify-between bg-[black] text-[white] p-[20px]">
-        <a className="" href="https://www.xm.com/" target="_blank" rel="noopener noreferrer">
-          <img src={xmLogo} width={130} alt="XM Logo" />
-        </a>
-        <div className="flex [&_a]:mr-[20px]">
-          <a className="hidden lg:block text-[15px]" href="https://www.xm.com/" target="_blank" rel="noopener noreferrer">XM Homepage</a>
-          <a className="hidden lg:block text-[15px]" href="https://www.xm.com/" target="_blank" rel="noopener noreferrer">Support</a>
-        </div>
-      </nav>
+      <Navigation />
 
-      <header className="flex flex-col items-center text-center pt-[80px] max-w-[1200px]">
-        <div className="max-w-[650px]">
-          <p className="text-[16px] leading-[40px] text-[#DDDDDD]">TRADE WITH</p>
-          <h2 className="text-[28px] leading-[38px] font-[400] text-[#FFFFFF] md:leading-[35px] md:font-[700] lg:text-[35px] lg:leading-[42px] mb-[30px]">Zero Swaps on All XM Ultra Low Accounts for more than 25 instruments! </h2>
-          <p className="text-[14px] leading-[22px] font-[400] text-[#DDDDDD] mb-[30px] lg:text-[16px] lg:leading[24px] max-w-[80%] mx-auto">enjoy spreads <strong>as low as 0.6 Pips</strong> and <strong>leverade uo to 1000:1</strong> on instruments like <strong>EURUSD, USDJPY, EURJPY, GBPUSD,</strong> and <strong>Gold</strong></p>
-          <button className="w-[90%] mx-auto block p-[20px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] bg-[#29A643]">OPEN ACCOUNT</button>
-          <p className="text-[14px] leading-[14px] font-[700] text-[#FFFFFF] mb-[15px]">New to trading? Try a <a href="wwww.google.com">Demo account</a></p>
-          <p className="text-[12px] leading-[18px] font-[400] text-[#FFFFFF] lg:leading-[14px]">Terms and Conditions apply<span className="text-[#D51820]">*</span>. To read the full TCs, <a className="text-[#D51820]" href="https://www.xm.com/register/profile-account?lang=en" target="_blank" rel="noopener noreferrer">click here</a></p>
-        </div>
-      </header>
+      {/* Header */}
+      <Header />
 
       <section className="mt-[150px] mb-[50px] max-w-[1200px]">
         <div className="grid grid-cols-1 w-[80%] mx-auto gap-2 md:grid-cols-3 lg:grid-cols-5">
@@ -82,7 +62,6 @@ function App() {
         </div>
       </section>
 
-      {/* Section 1 */}
       <section className="p-[20px]">
         <h2 className="text-center text-[32px] leading-[43px] font-[300] lg:text-[35px] lg:leading-[42px] lg:font-[300]">Why <span className="font-[700]">Trade</span> with XM?</h2>
         <div className="bg-[#29A643] w-[70px] h-[2px] mx-auto my-[30px]"></div>
@@ -127,18 +106,17 @@ function App() {
         </div>
       </section>
 
-      {/* Section 2 */}
       <section className="bg-[#201D27] my-[50px]">
         <h2 className="text-center text-[24px] leading-[26px] font-[700] mb-[30px] lg:text-[34px] lg:leading-[38px]">- Register Here -</h2>
         <p className="text-[16px] leading-[21px] font-[400] text-center mb-[30px]">Join us to celebrate our biggest night of the year.</p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 text-center border-0 md:border-b-[1px] md:border-t-[1px] min-h-[150px] max-w-[80%] mx-auto md:max-w-[650px]">
-         
+
           <div className="flex flex-col justify-center items-center py-[30px] border-b-[2px] md:border-r-[2px] md:border-b-[0px] md:py-[0]">
             <FaCalendarCheck size={26} />
             <p className="text-[16px] leading-[18px] font-[500] mt-[15px]">12 NOVEMBER 2022</p>
           </div>
-         
+
           <div className="flex flex-col justify-center items-center py-[30px] border-b-[2px] md:border-r-[2px] md:border-b-[0px] md:py-[0]">
             <FaRegClock size={26} />
             <p className="text-[16px] leading-[18px] font-[500] mt-[15px]">16:00 – 23:00</p>
@@ -157,7 +135,6 @@ function App() {
       {/* Gallery */}
       <Gallery />
 
-      {/* Section 3 */}
       <section className="bg-[#FFFFFF] text-[#000000] px-[30px] py-[50px]">
         <div className="py-[20px] px-[15px] grid grid-cols-12 gap-x-10 gap-y-10">
           <div className="col-span-12 row-span-3 lg:text-left text-center lg:col-span-4 lg:row-span-6">
