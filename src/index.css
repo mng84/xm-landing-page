@@ -76,11 +76,11 @@ header {
 input {
   color: #000000 !important;
 }
-
-input[type="date"],
-.date-input {
-  width: 80% !important;
-  color: #000000 !important;
+input[type="date"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #B1B1B1;
 }
 
 ::-webkit-input-placeholder {
