@@ -52,19 +52,19 @@ function App() {
         </div>
       </nav>
 
-      <header className="flex flex-col items-center text-center pt-[80px] max-w-[1200px]">
-        <div className="max-w-[650px]">
+      <header className="flex flex-col items-center text-center pt-[80px]">
+        <div className="max-w-[620px]">
           <p className="text-[16px] leading-[40px] text-[#DDDDDD]">TRADE WITH</p>
           <h2 className="text-[28px] leading-[38px] font-[400] text-[#FFFFFF] md:leading-[35px] md:font-[700] lg:text-[35px] lg:leading-[42px] mb-[30px]">Zero Swaps on All XM Ultra Low Accounts for more than 25 instruments! </h2>
-          <p className="text-[14px] leading-[22px] font-[400] text-[#DDDDDD] mb-[30px] lg:text-[16px] lg:leading[24px] max-w-[80%] mx-auto">enjoy spreads <strong>as low as 0.6 Pips</strong> and <strong>leverade uo to 1000:1</strong> on instruments like <strong>EURUSD, USDJPY, EURJPY, GBPUSD,</strong> and <strong>Gold</strong></p>
+          <p className="text-[14px] leading-[22px] font-[400] text-[#DDDDDD] mb-[30px]">enjoy spreads as low as 0.6 Dios and leverade uo to 1000:1 on instruments like EURUSD, USDJPY, EURJPY, GBPUSD, and Gold</p>
           <button className="w-[90%] mx-auto block p-[20px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] bg-[#29A643]">OPEN ACCOUNT</button>
           <p className="text-[14px] leading-[14px] font-[700] text-[#FFFFFF] mb-[15px]">New to trading? Try a <a href="wwww.google.com">Demo account</a></p>
           <p className="text-[12px] leading-[18px] font-[400] text-[#FFFFFF] lg:leading-[14px]">Terms and Conditions apply<span className="text-[#D51820]">*</span>. To read the full TCs, <a className="text-[#D51820]" href="https://www.xm.com/register/profile-account?lang=en" target="_blank" rel="noopener noreferrer">click here</a></p>
         </div>
       </header>
 
-      <section className="mt-[150px] mb-[50px] max-w-[1200px]">
-        <div className="grid grid-cols-1 w-[80%] mx-auto gap-2 md:grid-cols-3 lg:grid-cols-5">
+      <section className="mt-[50px] mb-[50px] max-w-[1200px]">
+        <div className="grid grid-cols-1 w-[80%] mx-auto gap-2 md:grid-cols-3 md:item-center lg:grid-cols-5">
           {mainData && mainData.map((crypto, index) => (
             <div key={index} className="rounded-[15px] border-[#A7A7A733] border-[4px] bg-[#8C8C8C1A] text-[#FFFFFF] p-[20px] my-[10px]">
               <div className="flex items-center">
@@ -132,18 +132,18 @@ function App() {
         <h2 className="text-center text-[24px] leading-[26px] font-[700] mb-[30px] lg:text-[34px] lg:leading-[38px]">- Register Here -</h2>
         <p className="text-[16px] leading-[21px] font-[400] text-center mb-[30px]">Join us to celebrate our biggest night of the year.</p>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 text-center border-0 md:border-b-[1px] md:border-t-[1px] min-h-[150px] max-w-[80%] mx-auto md:max-w-[650px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 text-center border-0 md:border-b-[1px] md:border-t-[1px] min-h-[150px] max-w-[650px] m-auto">
          
-          <div className="flex flex-col justify-center items-center py-[30px] border-b-[2px] md:border-r-[2px] md:border-b-[0px] md:py-[0]">
+          <div className="flex flex-col justify-center items-center py-[30px] md:border-r-[2px]">
             <FaCalendarCheck size={26} />
             <p className="text-[16px] leading-[18px] font-[500] mt-[15px]">12 NOVEMBER 2022</p>
           </div>
          
-          <div className="flex flex-col justify-center items-center py-[30px] border-b-[2px] md:border-r-[2px] md:border-b-[0px] md:py-[0]">
+          <div className="flex flex-col justify-center items-center border-0 md:border-r-[2px]">
             <FaRegClock size={26} />
             <p className="text-[16px] leading-[18px] font-[500] mt-[15px]">16:00 – 23:00</p>
           </div>
-          <div className="flex flex-col justify-center items-center px-[12px] py-[30px] md:py-[0]">
+          <div className="flex flex-col justify-center items-center px-[12px]">
             <FaLocationDot size={26} />
             <p className="text-[16px] leading-[18px] font-[500] mt-[15px] text-center">Centara Grand & Bangkok Convention Centre, Bangkok</p>
           </div>
