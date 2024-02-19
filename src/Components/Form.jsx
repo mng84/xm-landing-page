@@ -199,11 +199,11 @@ const Form = () => {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 className="p-[10px] w-full mb-[30px]" id="password" name="password" type="password" placeholder="Password" />
-                            <p className={passChars ? "default-message-text" : "error-message-text"}>8 - 15 characters</p>
-                            <p className={passNumber ? "default-message-text" : "error-message-text"}>1 or more numbers</p>
-                            <p className={passLowerChar ? "default-message-text" : "error-message-text"}>1 or more lower case letters</p>
-                            <p className={passUpperChar ? "default-message-text" : "error-message-text"}>1 or more upper case letters</p>
-                            <p className={passSpecialChars ? "default-message-text" : "error-message-text"}>1 or more special characters (#[]()@$&*!?|,.^/\+_-)</p>
+                            <p className={passChars ? "success-message-text" : "error-message-text"}>8 - 15 characters</p>
+                            <p className={passNumber ? "success-message-text" : "error-message-text"}>1 or more numbers</p>
+                            <p className={passLowerChar ? "success-message-text" : "error-message-text"}>1 or more lower case letters</p>
+                            <p className={passUpperChar ? "success-message-text" : "error-message-text"}>1 or more upper case letters</p>
+                            <p className={passSpecialChars ? "success-message-text" : "error-message-text"}>1 or more special characters (#[]()@$&*!?|,.^/\+_-)</p>
                         </div>
                     </div>
 
