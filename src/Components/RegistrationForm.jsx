@@ -158,7 +158,7 @@ const RegistrationForm = () => {
                             <input
                                 value={fullName}
                                 onChange={(e) => setFullName(e.target.value)}
-                                className="p-[10px] block w-full mb-[30px]" id="fullName" type="text" name="fullName" placeholder="Full Name" />
+                                className="border-[2px] p-[10px] block w-full mb-[30px]" id="fullName" type="text" name="fullName" placeholder="Full Name" />
                             {fullNameMessage && <p className="error-message-text">{fullNameMessage}</p>}
                         </div>
 
