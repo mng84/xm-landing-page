@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
-import SuccessFormMessage from "../components/SuccessFormMessage"
+import SuccessFormMessage from "./SuccessFormMessage"
 import Loader from "./Loader"
 
-const Form = () => {
+const RegistrationForm = () => {
     // Variables
     // Inputs
     const [fullName, setFullName] = useState("")
@@ -227,4 +227,4 @@ const Form = () => {
     )
 }
 
-export default Form
+export default RegistrationForm

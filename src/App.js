@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import Header from "./components/Header"
 import Navigation from "./components/Navigation"
-import Form from "./components/Form"
+import Form from "./components/RegistrationForm"
 import Gallery from "./components/Gallery"
 import Footer from "./components/Footer"
 
