@@ -3,8 +3,7 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
-import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io"
 
 const Gallery = () => {
 
@@ -52,7 +51,6 @@ const Gallery = () => {
   return (
     <section className="bg-[#ffffff] mt-[100px]">
       <h2 className="text-[24px] leading-[39px] font-[800] text[#252525] py-[50px] text-center text-[#252525] lg:text-[30px]">Event Gallery</h2>
-
 
       {/* Slider */}
       <div className="pb-[80px]">
