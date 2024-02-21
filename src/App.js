@@ -1,11 +1,12 @@
-import Header from "./componentss/Header"
-import Navigation from "./componentss/Navigation"
-import Cryptos from "./componentss/Cryptos"
-import WhyTradeWidthXM from "./componentss/WhyTradeWidthXM"
-import Form from "./componentss/RegistrationForm"
-import Gallery from "./componentss/Gallery"
-import BigFairHuman from "./componentss/BigFairHuman"
-import Footer from "./componentss/Footer"
+import Header from "./components/Header"
+import Navigation from "./components/Navigation"
+import Cryptos from "./components/Cryptos"
+import WhyTradeWidthXM from "./components/WhyTradeWidthXM"
+import RegistrationSection from "./components/RegistrationSection"
+import Form from "./components/RegistrationForm"
+import Gallery from "./components/Gallery"
+import BigFairHuman from "./components/BigFairHuman"
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       <WhyTradeWidthXM />
 
       {/* Registration Section */}
+      <RegistrationSection />
 
       {/* Form */}
       <Form />
