@@ -135,7 +135,7 @@ const RegistrationForm = () => {
                         <span className="form-step-icon"></span>
                         <h4 className="relative left-[14px] leading-[14px] text-[20px]">Step 1</h4>
                     </div>
-                    <div className="w-full h-[2px] bg-[#29A643] relative top-[20px]"></div>
+                    <div className="w-full h-[2px] bg-[--xm-green] relative top-[20px]"></div>
                 </div>
 
                 <div className="form-step-left-container flex flex-col">
@@ -210,7 +210,7 @@ const RegistrationForm = () => {
                     <button
                         onClick={handleSubmit}
                         disabled={isButtonDisabledSubmit ? true : false}
-                        className={showFormTwo ? "w-[80%] mx-auto block p-[20px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] bg-[#29A643] lg:w-[50%] lg:mx-auto" : "hidden"}>REGISTER NOW</button>
+                        className={showFormTwo ? "w-[80%] mx-auto block p-[20px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] bg-[--xm-green] lg:w-[50%] lg:mx-auto" : "hidden"}>REGISTER NOW</button>
 
                     {/* { isLoading ? <Loader /> : "" } */}
                     {/* {isLoading ? <Loader /> : <SuccessFormMessage />} */}
@@ -220,8 +220,8 @@ const RegistrationForm = () => {
             </form>
 
             <div className="form-accounts">
-                <p className="text-center text-[14px] leading-[16px] font-[400] my-[50px] lg:text-[14px] lg:leading-[16px] lg:font-[700]">Don’t have an account? <a className="text-[#D51820]" href="https://www.xm.com/register/profile-account?lang=en" target="_blank" rel="noopener noreferrer">Create one here</a> and register for the event</p>
-                <p className="text-center text-[12px] leading-[14px] font-[400] lg:text-[14px] lg:leading-[16px] lg:font-[700]">Terms and Conditions apply*. To read the full T&Cs, <a className="text-[#D51820]" href="https://www.xm.com/register/profile-account?lang=en" target="_blank" rel="noopener noreferrer">click here</a> </p>
+                <p className="text-center text-[14px] leading-[16px] font-[400] my-[50px] lg:text-[14px] lg:leading-[16px] lg:font-[700]">Don’t have an account? <a className="text-[--xm-red]" href="https://www.xm.com/register/profile-account?lang=en" target="_blank" rel="noopener noreferrer">Create one here</a> and register for the event</p>
+                <p className="text-center text-[12px] leading-[14px] font-[400] lg:text-[14px] lg:leading-[16px] lg:font-[700]">Terms and Conditions apply*. To read the full T&Cs, <a className="text-[--xm-red]" href="https://www.xm.com/register/profile-account?lang=en" target="_blank" rel="noopener noreferrer">click here</a> </p>
             </div>
         </section>
     )
