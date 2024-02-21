@@ -1,7 +1,7 @@
-import fastExecutionIcon from "./assets/images/fast-execusion-icon.png"
-import competitivePricingIcon from "./assets/images/competitive-pricing-icon.png"
-import techIcon from "./assets/images/tech-icon.png"
-import dolarIcon from "./assets/images/dollar-icon.png"
+import fastExecutionIcon from "../assets/images/fast-execusion-icon.png"
+import competitivePricingIcon from "../assets/images/competitive-pricing-icon.png"
+import techIcon from "../assets/images/tech-icon.png"
+import dolarIcon from "../assets/images/dollar-icon.png"
 
 const WhyTradeWidthXM = () => {
     return (

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
-// Crypto icons
-import bitcoin from "./assets/images/bitcoin.png"
+import bitcoin from "../assets/images/bitcoin.png"
 
 const Cryptos = () => {
 

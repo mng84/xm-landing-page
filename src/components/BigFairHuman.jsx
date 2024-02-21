@@ -1,7 +1,7 @@
-import authorisedAndRegulatedIcon from "./assets/images/authorised-and-regulated-icon.png"
-import commitedAndFairIcon from "./assets/images/commited-and-fair.png"
-import awardIcon from "./assets/images/award-icon.png"
-import supportIcon from "./assets/images/support.png"
+import authorisedAndRegulatedIcon from "../assets/images/authorised-and-regulated-icon.png"
+import commitedAndFairIcon from "../assets/images/commited-and-fair.png"
+import awardIcon from "../assets/images/award-icon.png"
+import supportIcon from "../assets/images/support.png"
 
 const BigFairHuman = () => {
     return (

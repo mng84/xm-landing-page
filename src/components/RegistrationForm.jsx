@@ -13,7 +13,6 @@ const RegistrationForm = () => {
     // Validation messages
     const [fullNameMessage, setFullNameMessage] = useState("")
     const [emailMessage, setEmailMessage] = useState("")
-    const [validInput, setValidInput] = useState(false)
 
     // Password validation
     const [passChars, setPassChars] = useState(false)
