@@ -149,7 +149,7 @@ const RegistrationForm = () => {
                         <p className={!showStepTwo ? "hidden" : "relative left-[10px]"}>Step 2</p>
                     </div>
 
-                    <div className={showStepTwo ? "w-full h-[2px] bg-[green] relative top-[20px]" : "w-full h-[2px] bg-[grey] relative top-[20px]"}></div>
+                    <div className={showStepTwo ? "w-full h-[2px] bg-[--xm-green] relative top-[20px]" : "w-full h-[2px] bg-[grey] relative top-[20px]"}></div>
                 </div>
             </div>
 
