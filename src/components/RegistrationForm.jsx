@@ -22,11 +22,12 @@ const RegistrationForm = () => {
     const [passSpecialChars, setPassSpecialChars] = useState(false)
 
     // DOB
-    const [age, setAge] = useState(0)
+    // const [age, setAge] = useState(0)
     const [isUnder18, setIsUnder18] = useState(false)
     const [isOver60, setIsOver60] = useState(false)
 
     // Form steps
+    const [showStepTwo, setShowStepTwo] = useState(false)
     const [showFormTwo, setShowFormTwo] = useState(false)
     const [isButtonDisabled, setIsButtonDisabled] = useState(true)
     const [isButtonDisabledSubmit, setIsButtonDisabledSubmit] = useState(true)
@@ -38,6 +39,7 @@ const RegistrationForm = () => {
 
     const nextStep = (e) => {
         e.preventDefault()
+        setShowStepTwo(true)
         setShowFormTwo(true)
     }
 
@@ -77,7 +79,7 @@ const RegistrationForm = () => {
             const dobDate = new Date(dob)
             const today = new Date()
             const ageInYears = Math.floor((today - dobDate) / (365.25 * 24 * 60 * 60 * 1000))
-            setAge(ageInYears)
+            // setAge(ageInYears)
             setIsUnder18(ageInYears < 18)
             setIsOver60(ageInYears > 60)
         }
@@ -126,13 +128,12 @@ const RegistrationForm = () => {
     }, [fullName, dob, password, email, fullNameMessage, isOver60, isUnder18, emailMessage])
 
     return (
-        <section className="form">
-
+        <section className="max-w-[1200px]">
             {/* Steps container */}
-            <div className="form-steps-progress-container grid grid-cols-2 mb-[50px] w-[80%] mx-auto lg:w-[100%]">
-                <div>
-                    <div className="flex">
-                        <div class="flex items-center justify-center h-8 w-8 bg-[--xm-green] rounded-full text-white font-bold text-[16px]">
+            <div className="flex justify-between items-center w-[80%] mx-auto lg:w-[100%]">
+                <div className="flex flex-col justify-center flex-1 min-h-[80px]">
+                    <div className="flex items-center">
+                        <div className="flex items-center justify-center h-8 w-8 bg-[--xm-green] rounded-full text-white font-bold text-[16px]">
                             1
                         </div>
                         <p className="relative left-[10px]">Step 1</p>
@@ -140,19 +141,20 @@ const RegistrationForm = () => {
                     <div className="w-full h-[2px] bg-[--xm-green] relative top-[20px]"></div>
                 </div>
 
-                <div className="form-step-left-container flex flex-col">
-                    <div className="flex">
-                        <div class="flex items-center justify-center h-8 w-8 bg-[--xm-green] rounded-full text-white font-bold text-[16px]">
-                            1
+                <div className="flex flex-col justify-center flex-1 min-h-[80px]">
+                    <div className={!showStepTwo ? "invisible" : "flex items-center"}>
+                        <div className="flex items-center justify-center h-8 w-8 bg-[--xm-green] rounded-full text-white font-bold text-[16px]">
+                            2
                         </div>
-                        <p className="relative left-[10px]">Step 1</p>
+                        <p className={!showStepTwo ? "hidden" : "relative left-[10px]"}>Step 2</p>
                     </div>
-                    <div className="w-full h-[2px] bg-[grey] relative top-[20px]"></div>
+
+                    <div className={showStepTwo ? "w-full h-[2px] bg-[green] relative top-[20px]" : "w-full h-[2px] bg-[grey] relative top-[20px]"}></div>
                 </div>
             </div>
 
             {/* Form */}
-            <form className="" autoComplete="off">
+            <form className="mt-[30px]" autoComplete="off">
                 <div className="form-wrapper">
                     <div className={showFormTwo ? "hidden" : "grid grid-cols-1 lg:grid-cols-2 gap-4 mb-[50px]"}>
                         <div className="w-[80%] mx-auto lg:w-[100%]">
@@ -179,7 +181,6 @@ const RegistrationForm = () => {
                         onClick={nextStep}
                         disabled={isButtonDisabled}
                         className={`${showFormTwo ? "hidden" : ""} ${isButtonDisabled ? "bg-[grey]" : "bg-[green]"} w-[80%] mx-auto block p-[20px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] lg:w-[50%] lg:mx-auto`}>CONTINUE</button>
-
 
                     <div className={showFormTwo ? "grid grid-cols-1 lg:grid-cols-2 gap-4 mb-[50px]" : "hidden"}>
                         <div className="w-[80%] mx-auto lg:w-[100%]">
@@ -218,7 +219,7 @@ const RegistrationForm = () => {
 
             <div className="form-accounts">
                 <p className="text-center text-[14px] leading-[16px] font-[400] my-[50px] lg:text-[14px] lg:leading-[16px] lg:font-[700]">Don’t have an account? <a className="text-[--xm-red]" href="https://www.xm.com/register/profile-account?lang=en" target="_blank" rel="noopener noreferrer">Create one here</a> and register for the event</p>
-                <p className="text-center text-[12px] leading-[14px] font-[400] lg:text-[14px] lg:leading-[16px] lg:font-[700]">Terms and Conditions apply*. To read the full T&Cs, <a className="text-[--xm-red]" href="https://www.xm.com/register/profile-account?lang=en" target="_blank" rel="noopener noreferrer">click here</a> </p>
+                <p className="text-center text-[12px] leading-[14px] font-[400] lg:text-[14px] lg:leading-[16px] lg:font-[700]">Terms and Conditions apply<span className="text-[--xm-red]">*</span>. To read the full T&Cs, <a className="text-[--xm-red]" href="https://www.xm.com/register/profile-account?lang=en" target="_blank" rel="noopener noreferrer">click here</a> </p>
             </div>
         </section>
     )
