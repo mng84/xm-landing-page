@@ -21,11 +21,6 @@ const RegistrationForm = () => {
     const [passUpperChar, setPassUpperChar] = useState(false)
     const [passSpecialChars, setPassSpecialChars] = useState(false)
 
-    // Regex fullname, email, password
-    const regFullName = /^[a-zA-Z -]+$/
-    const regEmail = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g
-    const regPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*\)\(\?\|\.,\/+\-_]).{8,15}$/
-
     // DOB
     const [age, setAge] = useState(0)
     const [isUnder18, setIsUnder18] = useState(false)
@@ -56,6 +51,11 @@ const RegistrationForm = () => {
     }
 
     useEffect(() => {
+
+        // Regex fullname, email, password
+        const regFullName = /^[a-zA-Z -]+$/
+        const regEmail = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g
+        // const regPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*\)\(\?\|\.,\/+\-_]).{8,15}$/
         const isFormValid =
             fullName.trim() !== "" && fullNameMessage === "" && dob !== "" && !isUnder18 && !isOver60
 
@@ -69,7 +69,7 @@ const RegistrationForm = () => {
         if (fullName.trim().length > 0 && !regFullName.test(fullName)) {
             setFullNameMessage("Please Enter Valid Name")
         } else {
-            setFullNameMessage('')
+            setFullNameMessage("")
         }
 
         // DOB check
@@ -116,31 +116,36 @@ const RegistrationForm = () => {
             setPassNumber(false)
         }
         // Special character
-        if ((/[!@#\$%\^&\*\)\(\?\|\.,\/+\-_]+/.test(password))) {
+        if ((/[!@#$%^&*)(?.,\/+\-_]+/.test(password))) {
             setPassSpecialChars(true)
         } else {
             setPassSpecialChars(false)
         }
 
 
-    }, [fullName, dob, password, regEmail, email, regFullName, regPassword, fullNameMessage, isOver60, isUnder18, emailMessage])
+    }, [fullName, dob, password, email, fullNameMessage, isOver60, isUnder18, emailMessage])
 
     return (
         <section className="form">
+
             {/* Steps container */}
             <div className="form-steps-progress-container grid grid-cols-2 mb-[50px] w-[80%] mx-auto lg:w-[100%]">
-                <div className="form-step-left-container flex flex-col">
-                    <div className="flex items-center">
-                        <span className="form-step-icon"></span>
-                        <h4 className="relative left-[14px] leading-[14px] text-[20px]">Step 1</h4>
+                <div>
+                    <div className="flex">
+                        <div class="flex items-center justify-center h-8 w-8 bg-[--xm-green] rounded-full text-white font-bold text-[16px]">
+                            1
+                        </div>
+                        <p className="relative left-[10px]">Step 1</p>
                     </div>
                     <div className="w-full h-[2px] bg-[--xm-green] relative top-[20px]"></div>
                 </div>
 
                 <div className="form-step-left-container flex flex-col">
-                    <div className="flex items-center">
-                        <span className="form-step-icon-2"></span>
-                        <h4 className="relative left-[14px] leading-[14px] text-[20px]">Step 2</h4>
+                    <div className="flex">
+                        <div class="flex items-center justify-center h-8 w-8 bg-[--xm-green] rounded-full text-white font-bold text-[16px]">
+                            1
+                        </div>
+                        <p className="relative left-[10px]">Step 1</p>
                     </div>
                     <div className="w-full h-[2px] bg-[grey] relative top-[20px]"></div>
                 </div>
@@ -149,9 +154,7 @@ const RegistrationForm = () => {
             {/* Form */}
             <form className="" autoComplete="off">
                 <div className="form-wrapper">
-                    {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-[50px]"> */}
                     <div className={showFormTwo ? "hidden" : "grid grid-cols-1 lg:grid-cols-2 gap-4 mb-[50px]"}>
-
                         <div className="w-[80%] mx-auto lg:w-[100%]">
                             <label htmlFor="fullName" className="block text-[14px] text-[#FFFFFF] leading-[16px] font-[700] my-[10px]">Full Name</label>
                             <input
@@ -172,15 +175,10 @@ const RegistrationForm = () => {
                         </div>
                     </div>
 
-                    {/* <button
-                        onClick={nextStep}
-                        disabled={isButtonDisabled ? true : false}
-                        className={showFormTwo ? "hidden" : "w-[80%] mx-auto block p-[20px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] bg-[#CCCCCC] lg:w-[50%] lg:mx-auto"}>CONTINUE</button> */}
-
                     <button
                         onClick={nextStep}
                         disabled={isButtonDisabled}
-                        className={`${showFormTwo ? 'hidden' : ''} ${isButtonDisabled ? 'bg-[grey]' : 'bg-[green]'} w-[80%] mx-auto block p-[20px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] lg:w-[50%] lg:mx-auto`}>CONTINUE</button>
+                        className={`${showFormTwo ? "hidden" : ""} ${isButtonDisabled ? "bg-[grey]" : "bg-[green]"} w-[80%] mx-auto block p-[20px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] lg:w-[50%] lg:mx-auto`}>CONTINUE</button>
 
 
                     <div className={showFormTwo ? "grid grid-cols-1 lg:grid-cols-2 gap-4 mb-[50px]" : "hidden"}>

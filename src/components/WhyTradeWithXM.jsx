@@ -14,7 +14,7 @@ const WhyTradeWidthXM = () => {
                     <div>
                         <h2 className="text-[20px] leading-[25px] font-[700] lg:text-[25px] lg:leading-[30px] lg:font-[500] max-w-[230px]">Superior Trade Execution</h2>
                         <div className="w-[50px] h-[2px] bg-[--xm-green] my-[30px]"></div>
-                        <p className="text-[12px] lg:text-[16px] lg:leading-[22px] lg:font-[700] mb-[50px]">99% of trades are executed in less than a second, with no requotes or rejections.</p>
+                        <p className="text-[14px] leading-[20px] font-[400]"><span className="font-[700]">99</span>% of trades are executed in <span className="font-[700]">less than a second</span>, with no requotes or rejections.</p>
                     </div>
                     <img src={fastExecutionIcon} className="green-icons" alt="Superior Trade Execution" />
                 </div>
@@ -22,7 +22,7 @@ const WhyTradeWidthXM = () => {
                     <div className="flex justify-between items-center">
                         <div><h2 className="title-underscore-green text-[20px] leading-[25px] font-[700] lg:text-[25px] lg:leading-[30px] lg:font-[500] max-w-[200px]">Competitive Pricing</h2>
                             <div className="w-[50px] h-[2px] bg-[--xm-green] my-[30px]"></div>
-                            <p>We offer some of the <strong>lowest spreads</strong> and we don’t charge commissions.</p></div>
+                            <p className="text-[14px] leading-[20px] font-[400]">We offer some of the <span className="font-[700]">lowest spreads</span> and we don’t charge commissions.</p></div>
                         <img src={competitivePricingIcon} width={90} height={90} alt="Competitive Trade Execution" />
                     </div>
                 </div>
@@ -34,7 +34,7 @@ const WhyTradeWidthXM = () => {
                         </div>
                         <img src={techIcon} width={70} height={70} alt="Advance Technology" />
                     </div>
-                    <p>Trade on <strong>MT4</strong> or <strong>MT5</strong>, with expert tools, across desktop, web and mobile.</p>
+                    <p className="text-[14px] leading-[20px] font-[400]">Trade on <span className="font-[700]">MT4</span> or <span className="font-[700]">MT5</span>, with expert tools, across desktop, web and mobile.</p>
                 </div>
                 <div className="col-span-12 row-span-3 bg-[#0B0819] px-[40px] py-[60px] rounded-[10px] lg:col-span-4 lg:row-span-6">
                     <div className="flex justify-between items-center">
@@ -44,7 +44,7 @@ const WhyTradeWidthXM = () => {
                         </div>
                         <img src={dolarIcon} width={70} height={70} alt="Start with $5" />
                     </div>
-                    <p>Start trading your preferred instruments with as little as a <strong>$5 minimum deposit</strong>.</p>
+                    <p className="text-[14px] leading-[20px] font-[400]">Start trading your preferred instruments with as little as a <span className="font-[700]">$5 minimum deposit</span>.</p>
                 </div>
             </div>
         </section>

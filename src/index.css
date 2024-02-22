@@ -113,32 +113,6 @@ input[type="date"] {
   font-weight: 400 !important;
 }
 
-
-.form-step-icon,
-.form-step-icon-2 {
-  position: relative;
-  width: 32px;
-  height: 32px;
-}
-
-.form-step-icon:before,
-.form-step-icon-2:before {
-  content: "1";
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: #29A643;
-  z-index: -1;
-}
-
-.form-step-icon-2:before {
-  content: "2";
-}
-
 .success-message-text {
   position: relative;
   left: 20px;
@@ -148,7 +122,8 @@ input[type="date"] {
   margin-top: 5px;
 }
 
-.success-message-text:before {
+.success-message-text:before,
+.success-message-text:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -158,18 +133,6 @@ input[type="date"] {
   height: 10px;
   border-radius: 50%;
   background: #29A643;
-}
-
-.success-message-text:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -18px;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #000000;
 }
 
 .error-message-text {
@@ -181,7 +144,8 @@ input[type="date"] {
   margin-top: 5px;
 }
 
-.error-message-text:before {
+.error-message-text:before,
+.error-message-text:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -193,18 +157,6 @@ input[type="date"] {
   background: #D51820;
 }
 
-.error-message-text:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -18px;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #000000;
-}
-
 .default-message-text {
   position: relative;
   left: 20px;
@@ -214,7 +166,8 @@ input[type="date"] {
   margin-top: 5px;
 }
 
-.default-message-text:before {
+.default-message-text:before,
+.default-message-text:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -226,15 +179,12 @@ input[type="date"] {
   background: #959595;
 }
 
-.default-message-text:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.default-message-text:after,
+.success-message-text:after,
+.error-message-text:after {
   left: -18px;
   width: 5px;
   height: 5px;
-  border-radius: 50%;
   background: #000000;
 }
 

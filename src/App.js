@@ -1,7 +1,7 @@
 import Header from "./components/Header"
 import Navigation from "./components/Navigation"
 import Cryptos from "./components/Cryptos"
-import WhyTradeWidthXM from "./components/WhyTradeWidthXM"
+import WhyTradeWithXM from "./components/WhyTradeWithXM"
 import RegistrationSection from "./components/RegistrationSection"
 import Form from "./components/RegistrationForm"
 import Gallery from "./components/Gallery"
@@ -9,10 +9,9 @@ import BigFairHuman from "./components/BigFairHuman"
 import Footer from "./components/Footer"
 
 function App() {
-
   return (
     <div className="w-full h-full max-w-[1200px] m-auto">
-
+     
       {/* <Navigation /> */}
       <Navigation />
 
@@ -23,7 +22,7 @@ function App() {
       <Cryptos />
 
       {/* Why trade with XM */}
-      <WhyTradeWidthXM />
+      <WhyTradeWithXM />
 
       {/* Registration Section */}
       <RegistrationSection />
