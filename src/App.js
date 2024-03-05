@@ -8,7 +8,6 @@ import Gallery from "./components/Gallery"
 import BigFairHuman from "./components/BigFairHuman"
 import Footer from "./components/Footer"
 
-
 function App() {
   return (
     <div className="w-full h-full max-w-[1200px] m-auto">
