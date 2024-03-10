@@ -128,7 +128,7 @@ const RegistrationForm = () => {
     }, [fullName, dob, password, email, fullNameMessage, isOver60, isUnder18, emailMessage])
 
     return (
-        <section className="max-w-[1200px]">
+        <section className="max-w-[1200px] mx-auto">
             {/* Steps container */}
             <div className="flex justify-between items-center w-[80%] mx-auto lg:w-[100%]">
                 <div className="flex flex-col justify-center flex-1 min-h-[80px]">

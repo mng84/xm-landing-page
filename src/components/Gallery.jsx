@@ -50,19 +50,20 @@ const Gallery = () => {
   }
   return (
     <section className="bg-[#ffffff] mt-[100px]">
-      <h2 className="text-[24px] leading-[39px] font-[800] text[#252525] py-[50px] text-center text-[#252525] lg:text-[30px]">Event Gallery</h2>
-
-      {/* Slider */}
-      <div className="pb-[80px]">
-        <Slider {...settings}>
-          <div className="bg-[#DADADA] w-[165px] h-[165px]"></div>
-          <div className="bg-[#DADADA] w-[165px] h-[165px]"></div>
-          <div className="bg-[#DADADA] w-[165px] h-[165px]"></div>
-          <div className="bg-[#DADADA] w-[165px] h-[165px]"></div>
-          <div className="bg-[#DADADA] w-[165px] h-[165px]"></div>
-          <div className="bg-[#DADADA] w-[165px] h-[165px]"></div>
-          <div className="bg-[#DADADA] w-[165px] h-[165px]"></div>
-        </Slider>
+      <div className="max-w-[1200px] mx-auto">
+        <h2 className="text-[24px] leading-[39px] font-[800] text[#252525] py-[50px] text-center text-[#252525] lg:text-[30px]">Event Gallery</h2>
+        {/* Slider */}
+        <div className="pb-[80px]">
+          <Slider {...settings}>
+            <div className="bg-[#DADADA] w-[165px] h-[165px]"></div>
+            <div className="bg-[#DADADA] w-[165px] h-[165px]"></div>
+            <div className="bg-[#DADADA] w-[165px] h-[165px]"></div>
+            <div className="bg-[#DADADA] w-[165px] h-[165px]"></div>
+            <div className="bg-[#DADADA] w-[165px] h-[165px]"></div>
+            <div className="bg-[#DADADA] w-[165px] h-[165px]"></div>
+            <div className="bg-[#DADADA] w-[165px] h-[165px]"></div>
+          </Slider>
+        </div>
       </div>
     </section>
   )

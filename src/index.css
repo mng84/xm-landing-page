@@ -38,7 +38,7 @@ body {
   background-color: #201D27;
 }
 
-.c-button{
+.c-button {
   font-family: "Bebas Neue", sans-serif;
   cursor: pointer;
 }
@@ -184,17 +184,4 @@ input[type="date"] {
   width: 5px;
   height: 5px;
   background: #000000;
-}
-
-/* Execution icon */
-.green-icons {
-  width: 100px;
-  height: 100px;
-}
-
-@media only screen and (min-width: 769px) {
-  .green-icons {
-    width: 200px;
-    height: 200px;
-  }
 }
