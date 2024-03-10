@@ -1,9 +1,9 @@
 import Navigation from "./Navigation"
 const Header = () => {
   return (
-    <header>
+    <header className="w-full">
       <Navigation />
-      <div className="flex flex-col items-center text-center pt-[80px] max-w-[1200px]">
+      <div className="flex flex-col items-center text-center pt-[80px] max-w-[1200px] mx-auto">
         <div className="max-w-[650px]">
           <p className="text-[16px] leading-[40px] text-[#DDDDDD]">TRADE WITH</p>
           <h1 className="text-[28px] leading-[38px] font-[400] text-[#FFFFFF] md:leading-[35px] lg:text-[35px] lg:leading-[42px] mb-[30px]"><span className="font-[700]">Zero Swaps</span> on All XM Ultra Low Accounts for more than 25 instruments! </h1>

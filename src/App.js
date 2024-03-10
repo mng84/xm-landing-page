@@ -10,7 +10,7 @@ import Footer from "./components/Footer"
 
 function App() {
   return (
-    <main className="w-full h-full max-w-[1200px] m-auto">
+    <main className="w-full h-full">
 
       {/* Header */}
       <Header />

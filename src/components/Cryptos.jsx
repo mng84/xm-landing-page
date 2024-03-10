@@ -32,7 +32,7 @@ const Cryptos = () => {
     }, [])
 
     return (
-        <section className="mt-[150px] mb-[50px] max-w-[1200px]">
+        <section className="mt-[150px] mb-[50px] max-w-[1200px] mx-auto">
             <div className="flex flex-col justify-center items-center gap-3 md:flex-row flex-wrap lg:flex-nowrap">
             {filteredData && filteredData.map((crypto, index) => (
                 <div key={index} className="w-full md:w-1/4 lg:1/5 rounded-[15px] border-[#A7A7A733] border-[4px] bg-[#8C8C8C1A] text-[#FFFFFF] p-[20px] my-[10px]">
@@ -45,15 +45,15 @@ const Cryptos = () => {
                     <div className="bottom">
                         <p className="text-[17px] leading-[21px] font-[700] mb-[10px] lg:text-[19px] lg:leading-[23px]">${crypto.price_usd}</p>
                         <p
-                            className={`flex items-center text-[12px] leading-[14px] lg:text-[13px] lg:leading-[16px] ${parseFloat(crypto.percent_change_24h) > 0
+                            className={`flex items-center text-[12px] leading-[14px] lg:text-[13px] lg:leading-[16px] gap-1 ${parseFloat(crypto.percent_change_24h) > 0
                                 ? "text-[--xm-green]"
                                 : "text-[#FFA3A6]"
                                 }`}
                         >
-                            {parseFloat(crypto.percent_change_24h) > 0 ? <div className="flex items-center justify-center h-8 w-8 bg-[--xm-green] rounded-full text-white font-bold text-[16px]"> <IoIosArrowUp /></div> :
-                                <div className="flex items-center justify-center h-8 w-8 bg-[#FFA3A6] rounded-full text-white font-bold text-[16px]">
+                            {parseFloat(crypto.percent_change_24h) > 0 ? <div className="flex items-center justify-center h-2 w-2 bg-[--xm-green] rounded-full text-white font-bold text-[12px]"> <IoIosArrowUp /></div> :
+                                <div className="flex items-center justify-center h-2 w-2 bg-[#FFA3A6] rounded-full text-white font-bold text-[12px]">
                                     <IoIosArrowDown /></div>}
-                            {crypto.percent_change_24h} %
+                            {crypto.percent_change_24h}%
                         </p>
                     </div>
                 </div>

@@ -5,14 +5,14 @@ import dolarIcon from "../assets/images/dollar-icon.png"
 
 const WhyTradeWidthXM = () => {
     return (
-        <section className="p-[20px]">
+        <section className="p-[20px] max-w-[1200px] mx-auto">
             <h2 className="text-center text-[32px] leading-[43px] font-[300] lg:text-[35px] lg:leading-[42px] lg:font-[300]">Why <span className="font-[700]">Trade</span> with XM?</h2>
             <div className="bg-[--xm-green] w-[70px] h-[2px] mx-auto my-[30px]"></div>
             <p className="text-center text-[14px] leading-[20px] font-[700] lg:text-[14px] lg:leading-[22px] lg:font-[400] lg:max-w-[650px] mx-auto">We have been providing traders around the world with the same <strong>premium experience</strong> for over a decade. As an <strong>industry-leader</strong>, we know what the modern trader needs to be <strong>successful</strong> in the markets.</p>
             <div className="py-[20px] px-[15px] grid grid-cols-12 gap-x-6 gap-y-5">
                 <div className="col-span-12 row-span-3 bg-[#0B0819] px-[40px] py-[60px] rounded-[10px] flex md:justify-between md:items-center lg:flex-col lg:col-span-4 lg:row-span-12">
                     <div>
-                        <h2 className="text-[20px] leading-[25px] font-[700] lg:text-[25px] lg:leading-[30px] lg:font-[500] max-w-[230px]">Superior Trade Execution</h2>
+                        <h2 className="text-[20px] leading-[25px] font-[700] lg:text-[25px] lg:leading-[30px] lg:font-[500] max-w-[230px]">Superior Trade <br />Execution</h2>
                         <div className="w-[50px] h-[2px] bg-[--xm-green] my-[30px]"></div>
                         <p className="text-[14px] leading-[20px] font-[400]"><span className="font-[700]">99</span>% of trades are executed in <span className="font-[700]">less than a second</span>, with no requotes or rejections.</p>
                     </div>
@@ -20,7 +20,7 @@ const WhyTradeWidthXM = () => {
                 </div>
                 <div className="col-span-12 row-span-3 bg-[#0B0819] px-[40px] py-[60px] rounded-[10px] lg:col-span-8 lg:row-span-6">
                     <div className="flex justify-between items-center">
-                        <div><h2 className="title-underscore-green text-[20px] leading-[25px] font-[700] lg:text-[25px] lg:leading-[30px] lg:font-[500] max-w-[200px]">Competitive Pricing</h2>
+                        <div><h2 className="title-underscore-green text-[20px] leading-[25px] font-[700] lg:text-[25px] lg:leading-[30px] lg:font-[500] max-w-[200px]">Competitive <br /> Pricing</h2>
                             <div className="w-[50px] h-[2px] bg-[--xm-green] my-[30px]"></div>
                             <p className="text-[14px] leading-[20px] font-[400]">We offer some of the <span className="font-[700]">lowest spreads</span> and we don’t charge commissions.</p></div>
                         <img src={competitivePricingIcon} width={90} height={90} alt="Competitive Trade Execution" />
@@ -29,7 +29,7 @@ const WhyTradeWidthXM = () => {
                 <div className="col-span-12 row-span-3 bg-[#0B0819] px-[40px] py-[60px] rounded-[10px] lg:col-span-4 lg:row-span-6">
                     <div className="flex justify-between items-center">
                         <div>
-                            <h2 className="title-underscore-green text-[20px] leading-[25px] font-[700] lg:text-[25px] lg:leading-[30px] lg:font-[500] max-w-[200px]">Advanced Technology</h2>
+                            <h2 className="title-underscore-green text-[20px] leading-[25px] font-[700] lg:text-[25px] lg:leading-[30px] lg:font-[500] max-w-[200px]">Advanced <br /> Technology</h2>
                             <div className="w-[50px] h-[2px] bg-[--xm-green] my-[30px]"></div>
                         </div>
                         <img src={techIcon} width={70} height={70} alt="Advance Technology" />
