@@ -38,7 +38,7 @@ body {
   background-color: #201D27;
 }
 
-button {
+.c-button{
   font-family: "Bebas Neue", sans-serif;
   cursor: pointer;
 }

@@ -180,7 +180,7 @@ const RegistrationForm = () => {
                     <button
                         onClick={nextStep}
                         disabled={isButtonDisabled}
-                        className={`${showFormTwo ? "hidden" : ""} ${isButtonDisabled ? "bg-[grey]" : "bg-[green]"} w-[80%] mx-auto block p-[20px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] lg:w-[50%] lg:mx-auto`}>CONTINUE</button>
+                        className={`${showFormTwo ? "hidden" : ""} ${isButtonDisabled ? "bg-[grey]" : "bg-[green]"} c-button w-[80%] mx-auto block p-[20px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] lg:w-[50%] lg:mx-auto`}>CONTINUE</button>
 
                     <div className={showFormTwo ? "grid grid-cols-1 lg:grid-cols-2 gap-4 mb-[50px]" : "hidden"}>
                         <div className="w-[80%] mx-auto lg:w-[100%]">
@@ -208,7 +208,7 @@ const RegistrationForm = () => {
                     <button
                         onClick={handleSubmit}
                         disabled={isButtonDisabledSubmit ? true : false}
-                        className={showFormTwo ? "w-[80%] mx-auto block p-[20px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] bg-[--xm-green] lg:w-[50%] lg:mx-auto" : "hidden"}>REGISTER NOW</button>
+                        className={showFormTwo ? "c-button w-[80%] mx-auto block p-[20px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] bg-[--xm-green] lg:w-[50%] lg:mx-auto" : "hidden"}>REGISTER NOW</button>
 
                     {/* { isLoading ? <Loader /> : "" } */}
                     {/* {isLoading ? <Loader /> : <SuccessFormMessage />} */}
