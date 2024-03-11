@@ -132,7 +132,6 @@ const RegistrationForm = () => {
             setPassSpecialChars(false)
         }
 
-
     }, [fullName, dob, password, email, fullNameMessage, isOver60, isUnder18, emailMessage])
 
     return (
