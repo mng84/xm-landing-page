@@ -20,6 +20,7 @@ const RegistrationForm = () => {
     const [passLowerChar, setPassLowerChar] = useState(false)
     const [passUpperChar, setPassUpperChar] = useState(false)
     const [passSpecialChars, setPassSpecialChars] = useState(false)
+    const [passErrorsContainer, setPassErrorsContainer] = useState(false)
 
     // DOB
     // const [age, setAge] = useState(0)
@@ -94,11 +95,17 @@ const RegistrationForm = () => {
         }
 
         // Password check
-        // if (password.trim().length < 8 || password.trim().length > 15) {
-        //     setPassChars(true)
-        // } else {
-        //     setPassChars(false)
-        // }
+        if (password.trim().length >= 8 && password.trim().length <= 15) {
+            setPassChars(true)
+        } else {
+            setPassChars(false)
+        }
+
+        if (password.trim().length > 0) {
+            setPassErrorsContainer(true)
+        } else {
+            setPassErrorsContainer(false)
+        }
 
         // 1 or more uppercase letters
         if ((/[A-Z]+/.test(password.trim()))) {
@@ -164,7 +171,6 @@ const RegistrationForm = () => {
                                 className="border-[2px] p-[10px] block w-full mb-[10px]" id="fullName" type="text" name="fullName" placeholder="Full Name" />
                             {fullNameMessage && <p className="error-message-text">{fullNameMessage}</p>}
                         </div>
-
                         <div className="w-[80%] mx-auto lg:w-[100%]">
                             <label htmlFor="dob" className="block text-[14px] text-[#FFFFFF] leading-[16px] font-[700] my-[10px]">Date Of Birth</label>
                             <input
@@ -175,28 +181,11 @@ const RegistrationForm = () => {
                             {isOver60 && <p className="error-message-text">Maximum age requirements, 60 years old</p>}
                         </div>
                     </div>
-
-                    {/* <button
-                        onClick={nextStep}
-                        disabled={isButtonDisabled}
-                        className={`${showFormTwo ? "hidden" : ""} ${isButtonDisabled ? "bg-[grey]" : "bg-[green]"} c-button w-[80%] mx-auto block p-[20px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] lg:w-[30%] lg:mx-auto`}>CONTINUE</button> */}
-
-
-
-
-
-
                     <button
                         onClick={nextStep}
                         disabled={isButtonDisabled}
                         className={`${showFormTwo ? "hidden" : ""} ${isButtonDisabled ? "bg-[grey]" : "bg-[--xm-green]"} c-button-font w-[80%] mx-auto block p-[5px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] lg:w-[30%] lg:mx-auto`}>CONTINUE
                     </button>
-
-
-
-
-
-
                     <div className={showFormTwo ? "grid grid-cols-1 lg:grid-cols-2 gap-4 mb-[50px]" : "hidden"}>
                         <div className="w-[80%] mx-auto lg:w-[100%]">
                             <label htmlFor="email" className="block text-[14px] text-[#FFFFFF] leading-[16px] font-[700] my-[10px]">Email</label>
@@ -208,14 +197,11 @@ const RegistrationForm = () => {
                         </div>
                         <div className="w-[80%] mx-auto lg:w-[100%]">
                             <label htmlFor="password" className="block text-[14px] text-[#FFFFFF] leading-[16px] font-[700] my-[10px]">Password</label>
-
-
                             <input
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 className="p-[10px] w-full mb-[10px]" id="password" name="password" type="password" placeholder="Password" />
-
-                            <div className="">    
+                            <div className={passErrorsContainer ? "" : "hidden"}>
                                 <p className={passChars ? "success-message-text" : "error-message-text"}>8 - 15 characters</p>
                                 <p className={passNumber ? "success-message-text" : "error-message-text"}>1 or more numbers</p>
                                 <p className={passLowerChar ? "success-message-text" : "error-message-text"}>1 or more lower case letters</p>
@@ -224,15 +210,10 @@ const RegistrationForm = () => {
                             </div>
                         </div>
                     </div>
-
                     <button
                         onClick={handleSubmit}
                         disabled={isButtonDisabledSubmit ? true : false}
                         className={showFormTwo ? "c-button-font w-[80%] mx-auto block p-[5px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] bg-[--xm-green] lg:w-[30%] lg:mx-auto" : "hidden"}>REGISTER NOW</button>
-
-                    {/* { isLoading ? <Loader /> : "" } */}
-                    {/* {isLoading ? <Loader /> : <SuccessFormMessage />} */}
-
                     {isLoading ? (<Loader />) : hasSubmitted ? (<SuccessFormMessage />) : ("")}
                 </div>
             </form>
