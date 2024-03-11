@@ -94,12 +94,11 @@ const RegistrationForm = () => {
         }
 
         // Password check
-        // if (password.trim().length < 8 || password.trim().length > 15) {
-        //     setPassChars(true)
-        // } else {
-        //     setPassChars(false)
-        // }
-
+        if (password.trim().length < 8 || password.trim().length > 15) {
+            setPassChars(true)
+        } else {
+            setPassChars(false)
+        }
         // 1 or more uppercase letters
         if ((/[A-Z]+/.test(password.trim()))) {
             setPassUpperChar(true)
@@ -161,7 +160,7 @@ const RegistrationForm = () => {
                             <input
                                 value={fullName}
                                 onChange={(e) => setFullName(e.target.value)}
-                                className="border-[2px] p-[10px] block w-full mb-[10px]" id="fullName" type="text" name="fullName" placeholder="Full Name" />
+                                className="border-[2px] p-[10px] block w-full mb-[30px]" id="fullName" type="text" name="fullName" placeholder="Full Name" />
                             {fullNameMessage && <p className="error-message-text">{fullNameMessage}</p>}
                         </div>
 
@@ -170,32 +169,16 @@ const RegistrationForm = () => {
                             <input
                                 value={dob}
                                 onChange={(e) => setDob(e.target.value)}
-                                className="date-input p-[10px] w-full text-[#B1B1B1] mb-[10px]" id="dob" type="date" name="dob" placeholder="Date of Birth" />
+                                className="date-input p-[10px] w-full text-[#B1B1B1] mb-[30px]" id="dob" type="date" name="dob" placeholder="Date of Birth" />
                             {isUnder18 && <p className="error-message-text">Minimum age requirements, 18 years old</p>}
                             {isOver60 && <p className="error-message-text">Maximum age requirements, 60 years old</p>}
                         </div>
                     </div>
 
-                    {/* <button
-                        onClick={nextStep}
-                        disabled={isButtonDisabled}
-                        className={`${showFormTwo ? "hidden" : ""} ${isButtonDisabled ? "bg-[grey]" : "bg-[green]"} c-button w-[80%] mx-auto block p-[20px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] lg:w-[30%] lg:mx-auto`}>CONTINUE</button> */}
-
-
-
-
-
-
                     <button
                         onClick={nextStep}
                         disabled={isButtonDisabled}
-                        className={`${showFormTwo ? "hidden" : ""} ${isButtonDisabled ? "bg-[grey]" : "bg-[--xm-green]"} c-button-font w-[80%] mx-auto block p-[5px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] lg:w-[30%] lg:mx-auto`}>CONTINUE
-                    </button>
-
-
-
-
-
+                        className={`${showFormTwo ? "hidden" : ""} ${isButtonDisabled ? "bg-[grey]" : "bg-[green]"} c-button w-[80%] mx-auto block p-[20px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] lg:w-[30%] lg:mx-auto`}>CONTINUE</button>
 
                     <div className={showFormTwo ? "grid grid-cols-1 lg:grid-cols-2 gap-4 mb-[50px]" : "hidden"}>
                         <div className="w-[80%] mx-auto lg:w-[100%]">
@@ -203,32 +186,27 @@ const RegistrationForm = () => {
                             <input
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="p-[10px] w-full mb-[10px]" id="email" type="email" name="email" placeholder="Email Address" />
+                                className="p-[10px] w-full mb-[30px]" id="email" type="email" name="email" placeholder="Email Address" />
                             {emailMessage && <p className="error-message-text">{emailMessage}</p>}
                         </div>
                         <div className="w-[80%] mx-auto lg:w-[100%]">
                             <label htmlFor="password" className="block text-[14px] text-[#FFFFFF] leading-[16px] font-[700] my-[10px]">Password</label>
-
-
                             <input
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                className="p-[10px] w-full mb-[10px]" id="password" name="password" type="password" placeholder="Password" />
-
-                            <div className="">    
-                                <p className={passChars ? "success-message-text" : "error-message-text"}>8 - 15 characters</p>
-                                <p className={passNumber ? "success-message-text" : "error-message-text"}>1 or more numbers</p>
-                                <p className={passLowerChar ? "success-message-text" : "error-message-text"}>1 or more lower case letters</p>
-                                <p className={passUpperChar ? "success-message-text" : "error-message-text"}>1 or more upper case letters</p>
-                                <p className={passSpecialChars ? "success-message-text" : "error-message-text"}>1 or more special characters (#[]()@$&*!?|,.^/\+_-)</p>
-                            </div>
+                                className="p-[10px] w-full mb-[30px]" id="password" name="password" type="password" placeholder="Password" />
+                            <p className={passChars ? "success-message-text" : "error-message-text"}>8 - 15 characters</p>
+                            <p className={passNumber ? "success-message-text" : "error-message-text"}>1 or more numbers</p>
+                            <p className={passLowerChar ? "success-message-text" : "error-message-text"}>1 or more lower case letters</p>
+                            <p className={passUpperChar ? "success-message-text" : "error-message-text"}>1 or more upper case letters</p>
+                            <p className={passSpecialChars ? "success-message-text" : "error-message-text"}>1 or more special characters (#[]()@$&*!?|,.^/\+_-)</p>
                         </div>
                     </div>
 
                     <button
                         onClick={handleSubmit}
                         disabled={isButtonDisabledSubmit ? true : false}
-                        className={showFormTwo ? "c-button-font w-[80%] mx-auto block p-[5px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] bg-[--xm-green] lg:w-[30%] lg:mx-auto" : "hidden"}>REGISTER NOW</button>
+                        className={showFormTwo ? "c-button w-[80%] mx-auto block p-[20px] text-[#FFFFFF] text-[24px] text-center font-[700] mb-[30px] bg-[--xm-green] lg:w-[30%] lg:mx-auto" : "hidden"}>REGISTER NOW</button>
 
                     {/* { isLoading ? <Loader /> : "" } */}
                     {/* {isLoading ? <Loader /> : <SuccessFormMessage />} */}

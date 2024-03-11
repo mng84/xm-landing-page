@@ -38,9 +38,8 @@ body {
   background-color: #201D27;
 }
 
-.c-button {
+.c-button-font {
   font-family: "Bebas Neue", sans-serif;
-  cursor: pointer;
 }
 
 header {

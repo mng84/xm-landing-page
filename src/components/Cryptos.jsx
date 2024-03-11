@@ -32,12 +32,12 @@ const Cryptos = () => {
     }, [])
 
     return (
-        <section className="mt-[150px] mb-[50px] max-w-[1200px] mx-auto">
+        <section className="mt-[150px] mb-[50px] max-w-[1200px] mx-auto p-[40px]">
             <div className="flex flex-col justify-center items-center gap-3 md:flex-row flex-wrap lg:flex-nowrap">
             {filteredData && filteredData.map((crypto, index) => (
                 <div key={index} className="w-full md:w-1/4 lg:1/5 rounded-[15px] border-[#A7A7A733] border-[4px] bg-[#8C8C8C1A] text-[#FFFFFF] p-[20px] my-[10px]">
                     <div className="flex items-center">
-                        <img src={iconsArray[index]} width={20} height={20} alt="Bitcoin" />
+                        <img src={iconsArray[index]} width={30} height={30} alt="Bitcoin" />
                         <p className="text-[12px] leading-[14px] font-[500] lg:text-[16px] lg:leading-[18px] ml-[10px]">{crypto.symbol}</p>
                         <p className="bg-[#FFF8D6] text-[8px] leading-[9px] text-[#000000] font-[500] rounded-[20px] flex justify-center items-center min-w-[72px] h-[15px] ml-[10px]">{crypto.name}</p>
                     </div>
