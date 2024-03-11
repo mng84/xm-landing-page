@@ -5,7 +5,7 @@ import dollarIcon from "../assets/images/dollar-icon.png"
 
 const WhyTradeWidthXM = () => {
     return (
-        <section className="p-[20px] max-w-[1200px] mx-auto">
+        <section className="c-trade-container p-[20px] max-w-[1200px] mx-auto">
             <h2 className="text-center text-[32px] leading-[43px] font-[300] lg:text-[35px] lg:leading-[42px] lg:font-[300]">Why <span className="font-[700]">Trade</span> with XM?</h2>
             <div className="bg-[--xm-green] w-[70px] h-[2px] mx-auto my-[30px]"></div>
             <p className="text-center text-[14px] leading-[20px] font-[700] lg:text-[14px] lg:leading-[22px] lg:font-[400] lg:max-w-[650px] mx-auto">We have been providing traders around the world with the same <strong>premium experience</strong> for over a decade. As an <strong>industry-leader</strong>, we know what the modern trader needs to be <strong>successful</strong> in the markets.</p>

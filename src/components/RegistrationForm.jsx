@@ -175,7 +175,7 @@ const RegistrationForm = () => {
                             <input
                                 value={dob}
                                 onChange={(e) => setDob(e.target.value)}
-                                className="date-input p-[10px] w-full text-[#B1B1B1] mb-[10px]" id="dob" type="date" name="dob" placeholder="Date of Birth" />
+                                className="date-input placeholder-red-500 p-[10px] w-full text-[#B1B1B1] mb-[10px]" id="dob" type="date" name="dob" placeholder="Date of Birth" />
                             {isUnder18 && <p className="error-message-text">Minimum age requirements, 18 years old</p>}
                             {isOver60 && <p className="error-message-text">Maximum age requirements, 60 years old</p>}
                         </div>
